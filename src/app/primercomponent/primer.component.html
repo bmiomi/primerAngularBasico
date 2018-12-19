@@ -1,0 +1,23 @@
+<div class="container">
+      
+    <h1>Libro: </h1>
+        <form>
+
+            <label for="title">Titulo: </label>
+            <input type= "text" class ="form-control" 
+            id="title"  required [(ngModel)]="mybook.title" 
+            name='title'/>
+            
+            <label for="author">Autor: </label>
+            <input type= "text" class ="form-control" 
+            id="author" required [(ngModel)]="mybook.author"
+             name='author'/>
+        
+             <label for="url">Url: </label>
+             <input type= "text" class ="form-control" 
+             id="url" required [(ngModel)]="mybook.url"
+              name='url'/>
+         
+              <input type="submit" value="enviar">
+        </form>
+</div>

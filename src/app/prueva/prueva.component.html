@@ -1,0 +1,54 @@
+<div class="container">
+  <h1>Prueva</h1>
+
+  <div class="acordion" id="accordionExample">
+
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          <button class='btn btn-link ' type='button' data-toggle="collapse">
+            <small>Recorrer elementos</small>
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          <div *ngFor="let elemento of elementos">
+            <p>{{elemento}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id='headingtwo'>
+        <h5 class="mb-0">
+          <button class='btn btn-link'>
+            <small>condicionar elementos</small>
+          </button>
+        </h5>
+      </div>
+      <div class="collapsetwo" class="collapse" aria-labelledby="headingtwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <div *ngIf="estado">
+            <p>esta activo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div>
+
+    <form (submit)='agregar(elemento)'>
+      <input type="text" #elemento>
+      <input type='submit' value='enviar' class="btn-danger">
+    </form>
+
+    <ul>
+      <li></li>
+    </ul>
+
+  </div>
